@@ -1,7 +1,7 @@
 # Hierarchical README Design
 
 **Date:** 2026-03-23
-**Project:** HTTP & CSS Demo — AISIX
+**Project:** HTTP & CSS Demo — AISIX AI Gateway
 **Type:** Documentation Architecture
 
 ---
@@ -70,12 +70,12 @@ contributing.md
 #### Outline:
 
 ```markdown
-# HTTP & CSS Demo — AISIX
+# HTTP & CSS Demo — AISIX AI Gateway
 
 ## Overview
 - Static HTML + CSS demo landing page
 - Pure HTML + CSS, no build tools
-- Active: AISIX landing page implemented
+- Active: AISIX AI Gateway landing page implemented
 
 ## Quick Start
 - Open index.html directly in browser

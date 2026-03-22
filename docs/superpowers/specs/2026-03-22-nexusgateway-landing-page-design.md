@@ -1,4 +1,4 @@
-# AISIX 落地页 — 设计规格文档
+# AISIX AI Gateway 落地页 — 设计规格文档
 
 **日期：** 2026-03-22  
 **状态：** 已批准  
@@ -8,7 +8,7 @@
 
 ## 概述
 
-为开源 AI 网关项目 **AISIX** 创建一个单页官方落地页。
+为开源 AI 网关项目 **AISIX AI Gateway** 创建一个单页官方落地页。
 目标受众是正在评估或计划采用该项目的开发者。
 页面需呈现现代感、技术感和可信度，与顶级开源工具（如 Vercel、Linear、Shadcn）的视觉风格保持一致。
 
@@ -69,7 +69,7 @@ css/
 
 ### 1. `<header>` — 吸顶导航栏
 
-- **Logo：** 六边形图标 + "AISIX" 文字标识（橙色）
+- **Logo：** 六边形图标 + "AISIX AI Gateway" 文字标识（橙色）
 - **导航链接：** Features · Docs · GitHub（在新标签页打开）
 - **CTA 按钮：** "GitHub ★" — 链接至 `https://github.com/membphis/http_css_demo`
 - **滚动行为：** 吸顶固定，纯 CSS `position: sticky` 实现

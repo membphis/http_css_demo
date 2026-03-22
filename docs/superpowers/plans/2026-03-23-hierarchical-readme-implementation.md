@@ -55,7 +55,7 @@ Expected: docs/ directory exists and is empty
 - [ ] **Step 1: Create README.md with header and title**
 
 ```markdown
-# HTTP & CSS Demo — AISIX
+# HTTP & CSS Demo — AISIX AI Gateway
 
 > Static HTML + CSS demonstration landing page with clean architecture and modern design.
 ```
@@ -65,7 +65,7 @@ Expected: docs/ directory exists and is empty
 ```markdown
 ## Overview
 
-This project demonstrates a production-ready static HTML + CSS landing page for AISIX, an open-source AI Gateway. Built with pure HTML and CSS — no build tools, no bundler, no JavaScript.
+This project demonstrates a production-ready static HTML + CSS landing page for AISIX AI Gateway, an open-source AI Gateway. Built with pure HTML and CSS — no build tools, no bundler, no JavaScript.
 
 **Tech Stack:**
 - Static HTML5
@@ -73,7 +73,7 @@ This project demonstrates a production-ready static HTML + CSS landing page for 
 - No build tools or package managers
 
 **Project Status:**
-- Active — AISIX landing page implemented
+- Active — AISIX AI Gateway landing page implemented
 
 Open `.html` files directly in a browser to preview.
 ```
@@ -124,7 +124,7 @@ Refresh your browser after making changes to see updates instantly.
 http_css_demo/
 ├── README.md              # This file
 ├── AGENTS.md              # Architecture and development guidelines
-├── index.html             # AISIX landing page
+├── index.html             # AISIX AI Gateway landing page
 ├── css/
 │   ├── reset.css           # Browser reset (box-sizing, list, anchor, media)
 │   ├── variables.css       # Design tokens (all CSS custom properties)
@@ -801,7 +801,7 @@ Copy the entire `<header>` and `<footer>` from existing pages:
     <div class="container site-header__inner">
       <a href="../" class="site-header__logo">
         <div class="site-header__logo-icon">⬡</div>
-        AISIX
+        AISIX AI Gateway
       </a>
       <nav class="site-header__nav">
         <a href="#features" class="nav-link">Features</a>

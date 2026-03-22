@@ -10,7 +10,7 @@
 
 ### 当前状态
 
-AISIX 落地页 (http_css_demo) 已实现：
+AISIX AI Gateway 落地页 (http_css_demo) 已实现：
 - Hero 区域带有渐变发光效果
 - Features 区域包含 6 张 Feature 卡片，采用 3 列网格布局
 - 每张 Feature 卡片都有 `.feature-card__glow` 元素（静态内部发光）
@@ -43,7 +43,7 @@ Feature 卡片在悬停时缺乏强烈的视觉反馈。虽然有基础交互性
 ### 选定方案：**A — 统一品牌色发光**
 
 **理由：**
-1. **品牌一致性** — 单一颜色强化 AISIX 品牌身份（橙色）
+1. **品牌一致性** — 单一颜色强化 AISIX AI Gateway 品牌身份（橙色）
 2. **性能** — 单层 box-shadow 性能最优
 3. **简洁性** — 代码改动最小，易于维护
 4. **视觉连贯性** — 与 Hero 区域的橙色主导设计相匹配

@@ -1,8 +1,8 @@
-# AISIX 落地页实现计划
+# AISIX AI Gateway 落地页实现计划
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 创建 AISIX 开源 AI Gateway 的官方落地页，包含 Hero、Features、Code Snippet、GitHub CTA 四个核心区块。
+**Goal:** 创建 AISIX AI Gateway 开源 AI Gateway 的官方落地页，包含 Hero、Features、Code Snippet、GitHub CTA 四个核心区块。
 
 **Architecture:** 纯静态 HTML + CSS，单页 `index.html`，样式拆分为 4 个 CSS 文件按顺序加载（reset → variables → main → landing）。无 JavaScript，Tab 切换通过隐藏 radio input + CSS `:checked` 兄弟选择器实现。
 
@@ -942,7 +942,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AISIX — Open Source AI Gateway</title>
+  <title>AISIX AI Gateway — Open Source AI Gateway</title>
   <meta name="description" content="Route, secure and scale any AI provider with a single unified API. Open source, self-hostable AI Gateway.">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
@@ -956,7 +956,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
     <div class="container site-header__inner">
       <a href="/" class="site-header__logo">
         <div class="site-header__logo-icon">⬡</div>
-        AISIX
+        AISIX AI Gateway
       </a>
       <nav class="site-header__nav">
         <a href="#features" class="nav-link">Features</a>
@@ -1000,7 +1000,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
         <div class="section-header">
           <span class="section-header__label">Features</span>
           <h2 class="section-header__title">一个网关，接管所有 AI</h2>
-          <p class="section-header__subtitle">从路由到可观测性，AISIX 覆盖生产环境所需的一切</p>
+          <p class="section-header__subtitle">从路由到可观测性，AISIX AI Gateway 覆盖生产环境所需的一切</p>
         </div>
         <div class="features__grid">
 
@@ -1090,7 +1090,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
     <span class="tok-param">model</span><span class="tok-punct">=</span><span class="tok-string">"gpt-4o"</span><span class="tok-punct">,</span>
     <span class="tok-param">messages</span><span class="tok-punct">=[{</span><span class="tok-string">"role"</span><span class="tok-punct">:</span> <span class="tok-string">"user"</span><span class="tok-punct">,</span> <span class="tok-string">"content"</span><span class="tok-punct">:</span> <span class="tok-string">"Hello!"</span><span class="tok-punct">}]</span>
 <span class="tok-punct">)</span>
-<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 AISIX 即可</span>
+<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 AISIX AI Gateway 即可</span>
             </div>
 
             <div id="panel-node" class="code-panel">
@@ -1152,7 +1152,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
       <div class="site-footer__inner">
         <div>
           <div class="site-footer__brand">
-            <span>⬡</span> AISIX
+            <span>⬡</span> AISIX AI Gateway
           </div>
           <p class="site-footer__tagline">Open Source AI Gateway</p>
         </div>
@@ -1164,7 +1164,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
         </nav>
         <p class="site-footer__meta">MIT License · Made with ♥ by the community</p>
       </div>
-      <p class="site-footer__copy">© 2026 AISIX. Released under the MIT License.</p>
+      <p class="site-footer__copy">© 2026 AISIX AI Gateway. Released under the MIT License.</p>
     </div>
   </footer>
 
@@ -1192,7 +1192,7 @@ python3 -m http.server 8000
 
 ```bash
 git add index.html
-git commit -m "feat: add complete index.html for AISIX landing page"
+git commit -m "feat: add complete index.html for AISIX AI Gateway landing page"
 ```
 
 ---
