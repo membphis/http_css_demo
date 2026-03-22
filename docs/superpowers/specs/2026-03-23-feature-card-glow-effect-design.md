@@ -1,260 +1,260 @@
-# Feature Card Hover Glow Effect — Design Spec
+# Feature 卡片悬停发光效果 — 设计规范
 
-**Date:** 2026-03-23
-**Status:** Approved
-**Author:** OpenCode Agent
-
----
-
-## Project Context
-
-### Current State
-
-NexusGateway landing page (http_css_demo) is implemented with:
-- Hero section with gradient glows
-- Features section with 6 feature cards in a 3-column grid
-- Each feature card has a `.feature-card__glow` element (static internal glow)
-- Current hover effect: `translateY(-3px)` + border color change + shadow-md
-
-### Problem
-
-The feature cards lack a strong visual feedback on hover. While they have basic interactivity, they don't feel as premium or engaging as the hero section which uses gradient glow effects.
-
-### Opportunity
-
-Adding an external glow effect on hover will:
-- Provide stronger visual feedback for user interaction
-- Create visual consistency with hero section's glow aesthetic
-- Enhance the "tech-forward" feel of the product
-- Improve affordance and discoverability
+**日期:** 2026-03-23
+**状态:** 已批准
+**作者:** OpenCode Agent
 
 ---
 
-## Design Decision
+## 项目背景
 
-### Evaluated Approaches
+### 当前状态
 
-| Approach | Description | Trade-offs |
+NexusGateway 落地页 (http_css_demo) 已实现：
+- Hero 区域带有渐变发光效果
+- Features 区域包含 6 张 Feature 卡片，采用 3 列网格布局
+- 每张 Feature 卡片都有 `.feature-card__glow` 元素（静态内部发光）
+- 当前悬停效果：`translateY(-3px)` + 边框颜色变化 + shadow-md
+
+### 问题
+
+Feature 卡片在悬停时缺乏强烈的视觉反馈。虽然有基础交互性，但不如 Hero 区域（使用渐变发光效果）那样精致和引人入胜。
+
+### 机会
+
+在悬停时添加外部发光效果将：
+- 提供更强的用户交互视觉反馈
+- 与 Hero 区域的发光美学保持视觉一致性
+- 增强产品的"科技前沿"感
+- 提升易用性和可发现性
+
+---
+
+## 设计决策
+
+### 评估的方案
+
+| 方案 | 描述 | 权衡 |
 |----------|-------------|------------|
-| **A. Unified Brand Glow** | All cards use brand orange (#f97316) external glow via box-shadow | ✅ Simple, performant, brand-consistent<br>❌ Less visual variety across cards |
-| **B. Card-Specific Glow** | Each card's glow matches its icon color (orange/blue/green/purple) | ✅ More visual richness<br>❌ Requires multiple CSS variants, more code |
-| **C. Gradient Glow** | Pseudo-element with orange→blue gradient and blur | ✅ Most sophisticated effect<br>❌ More complex, additional DOM element |
+| **A. 统一品牌色发光** | 所有卡片使用品牌橙色 (#f97316) 通过 box-shadow 实现外部发光 | ✅ 简单、高性能、品牌一致<br>❌ 卡片间视觉变化较少 |
+| **B. 卡片专属色发光** | 每张卡片的发光颜色与其图标颜色匹配（橙/蓝/绿/紫） | ✅ 视觉丰富度更高<br>❌ 需要多个 CSS 变体，代码更多 |
+| **C. 渐变发光** | 使用伪元素，橙色→蓝色渐变 + 模糊 | ✅ 最精致的效果<br>❌ 更复杂，需要额外的 DOM 元素 |
 
-### Selected Approach: **A — Unified Brand Glow**
+### 选定方案：**A — 统一品牌色发光**
 
-**Rationale:**
-1. **Brand Consistency** — Single color reinforces NexusGateway brand identity (orange)
-2. **Performance** — Single box-shadow layer is most performant
-3. **Simplicity** — Minimal code change, easy to maintain
-4. **Visual Cohesion** — Matches hero section's orange-centric design
-5. **User Feedback** — User selected this option for "more unified" appearance
+**理由：**
+1. **品牌一致性** — 单一颜色强化 NexusGateway 品牌身份（橙色）
+2. **性能** — 单层 box-shadow 性能最优
+3. **简洁性** — 代码改动最小，易于维护
+4. **视觉连贯性** — 与 Hero 区域的橙色主导设计相匹配
+5. **用户反馈** — 用户选择此方案是因为"更统一"的外观
 
 ---
 
-## Technical Implementation
+## 技术实现
 
-### Files Modified
+### 修改的文件
 
-**Single file change:** `css/landing.css`
+**单个文件变更：** `css/landing.css`
 
-### CSS Change
+### CSS 变更
 
-Modify `.feature-card:hover` selector to add multi-layer box-shadow:
+修改 `.feature-card:hover` 选择器，添加多层 box-shadow：
 
 ```css
 .feature-card:hover {
   transform: translateY(-3px);
   border-color: var(--color-border-accent);
   box-shadow:
-    0 0 0 1px rgba(249, 115, 22, 0.2),    /* Border glow ring */
-    0 0 20px rgba(249, 115, 22, 0.35),     /* External glow */
-    0 4px 12px rgba(0, 0, 0, 0.5);        /* Drop shadow */
+    0 0 0 1px rgba(249, 115, 22, 0.2),    /* 边框光晕环 */
+    0 0 20px rgba(249, 115, 22, 0.35),     /* 外部发光 */
+    0 4px 12px rgba(0, 0, 0, 0.5);        /* 投影阴影 */
 }
 ```
 
-### Glow Parameters
+### 发光参数
 
-- **Color:** `rgba(249, 115, 22, 0.35)` — Brand orange #f97316 at 35% opacity
-- **Spread:** `20px` blur radius for visible but not overwhelming glow
-- **Border Ring:** `1px` border + `0.2` opacity creates depth layer
-- **Transition:** Inherits existing `--transition-base: 250ms ease`
+- **颜色：** `rgba(249, 115, 22, 0.35)` — 品牌橙色 #f97316，透明度 35%
+- **扩散：** `20px` 模糊半径，发光明显但不刺眼
+- **边框环：** `1px` 边框 + `0.2` 透明度，创建深度层次
+- **过渡：** 继承现有的 `--transition-base: 250ms ease`
 
-### Existing Components Preserved
+### 保留的现有组件
 
-- ✅ `transform: translateY(-3px)` — Upward lift animation
-- ✅ `border-color: var(--color-border-accent)` — Border color change
-- ✅ Internal `.feature-card__glow` elements remain static
-- ✅ All responsive breakpoints unchanged
+- ✅ `transform: translateY(-3px)` — 向上浮动动画
+- ✅ `border-color: var(--color-border-accent)` — 边框颜色变化
+- ✅ 内部 `.feature-card__glow` 元素保持静态
+- ✅ 所有响应式断点保持不变
 
-### No New Design Tokens
+### 无需新的设计 token
 
-The implementation uses existing tokens and values:
-- Glow color matches existing `--color-primary: #f97316`
-- Uses existing `--color-border-accent` for border
-- Uses existing `--transition-base` for animation
+实现使用现有的 tokens 和值：
+- 发光颜色匹配现有的 `--color-primary: #f97316`
+- 使用现有的 `--color-border-accent` 作为边框
+- 使用现有的 `--transition-base` 进行动画
 
 ---
 
-## Impact Analysis
+## 影响分析
 
-### Affected Components
+### 受影响的组件
 
-| Component | Change | Impact |
+| 组件 | 变更 | 影响 |
 |-----------|--------|--------|
-| `.feature-card` | Add box-shadow layers | Positive visual enhancement |
-| `.feature-card:hover` | Expand shadow stack | No breaking changes |
-| All 6 feature cards | New glow effect | Consistent behavior |
+| `.feature-card` | 添加 box-shadow 层 | 正面的视觉增强 |
+| `.feature-card:hover` | 扩展阴影堆栈 | 无破坏性变更 |
+| 所有 6 张 Feature 卡片 | 新的发光效果 | 行为一致 |
 
-### Unaffected Components
+### 未受影响的组件
 
-- ✅ Hero section
-- ✅ Code demo section
-- ✅ CTA banner
-- ✅ Navigation, buttons, footer
-- ✅ Other page sections
+- ✅ Hero 区域
+- ✅ Code 演示区域
+- ✅ CTA 横幅
+- ✅ 导航、按钮、页脚
+- ✅ 其他页面部分
 
-### Performance
+### 性能
 
-- **GPU Acceleration:** box-shadow is GPU-accelerated in modern browsers
-- **Animation Cost:** Minimal — single property transition on hover
-- **Render Blocking:** None — pure CSS, no JS
-- **File Size:** ~50 bytes added to CSS
+- **GPU 加速：** box-shadow 在现代浏览器中是 GPU 加速的
+- **动画成本：** 最小 — 悬停时单属性过渡
+- **渲染阻塞：** 无 — 纯 CSS，无需 JS
+- **文件大小：** CSS 增加约 50 字节
 
-### Browser Compatibility
+### 浏览器兼容性
 
 - ✅ Chrome 10+, Firefox 4+, Safari 5.1+
-- ✅ No vendor prefixes required
-- ✅ Works with existing responsive design (768px breakpoint)
+- ✅ 无需供应商前缀
+- ✅ 与现有响应式设计兼容（768px 断点）
 
 ---
 
-## Success Criteria
+## 成功标准
 
-**Functional:**
-- [ ] Hover over any feature card shows orange external glow
-- [ ] Glow animation is smooth (250ms transition)
-- [ ] Glow appears on all 6 feature cards consistently
+**功能性：**
+- [ ] 悬停在任何 Feature 卡片上显示橙色外部发光
+- [ ] 发光动画平滑（250ms 过渡）
+- [ ] 所有 6 张 Feature 卡片发光效果一致
 
-**Visual:**
-- [ ] Glow is visible but not overwhelming
-- [ ] Glow complements existing card design
-- [ ] Hover effect feels premium and polished
-- [ ] Glow color matches brand identity
+**视觉：**
+- [ ] 发光可见但不刺眼
+- [ ] 发光与现有卡片设计相辅相成
+- [ ] 悬停效果感觉精致和专业
+- [ ] 发光颜色与品牌身份匹配
 
-**Performance:**
-- [ ] No layout shift or jank
-- [ ] Animation is 60fps or better
-- [ ] No increased page load time
+**性能：**
+- [ ] 无布局偏移或卡顿
+- [ ] 动画 60fps 或更好
+- [ ] 页面加载时间无增加
 
-**Code Quality:**
-- [ ] Follows AGENTS.md BEM naming conventions
-- [ ] Uses design tokens (no hardcoded colors)
-- [ ] Single-file change (minimal scope)
-
----
-
-## Testing Checklist
-
-### Manual Testing
-
-1. **Desktop Chrome/Edge**
-   - Open `index.html` in Chrome/Edge
-   - Navigate to Features section
-   - Hover over each of the 6 feature cards
-   - Verify orange glow appears and animates smoothly
-
-2. **Desktop Firefox**
-   - Open `index.html` in Firefox
-   - Verify same glow effect appears
-
-3. **Mobile/Responsive**
-   - Resize browser to < 768px width
-   - Verify cards stack vertically (existing behavior)
-   - Verify glow effect still works on touch/tap
-
-4. **Edge Cases**
-   - Hover over cards rapidly — verify animation doesn't break
-   - Verify hover state clears when mouse leaves card
-
-### Visual Regression
-
-- Compare before/after screenshots of Features section
-- Ensure no unintended side effects on other sections
+**代码质量：**
+- [ ] 遵循 AGENTS.md BEM 命名约定
+- [ ] 使用设计 tokens（无硬编码颜色）
+- [ ] 单文件变更（最小范围）
 
 ---
 
-## Alternatives Considered
+## 测试清单
 
-### Alternative B: Card-Specific Glow (Rejected)
+### 手动测试
 
-**Would have required:**
-- 4 new CSS modifiers: `.feature-card--glow-orange`, `--glow-blue`, `--glow-green`, `--glow-purple`
-- Adding modifier classes to HTML feature cards
-- 4x more CSS code
+1. **桌面版 Chrome/Edge**
+   - 在 Chrome/Edge 中打开 `index.html`
+   - 导航到 Features 区域
+   - 悬停每张 Feature 卡片（6 张）
+   - 验证橙色发光出现且动画平滑
 
-**Why rejected:**
-- User preference for "more unified" appearance
-- Increased maintenance burden
-- Visual variety less important than brand consistency
+2. **桌面版 Firefox**
+   - 在 Firefox 中打开 `index.html`
+   - 验证相同的发光效果
 
-### Alternative C: Pseudo-Element Glow (Rejected)
+3. **移动端/响应式**
+   - 调整浏览器宽度至 < 768px
+   - 验证卡片垂直堆叠（现有行为）
+   - 验证发光效果在触摸/点击时仍有效
 
-**Would have required:**
-- New `::before` or `::after` pseudo-element
-- `overflow: visible` on `.feature-card`
-- Additional CSS rules for z-index and positioning
+4. **边缘情况**
+   - 快速悬停卡片 — 验证动画不会中断
+   - 验证鼠标离开卡片时悬停状态清除
 
-**Why rejected:**
-- More complex implementation
-- Unnecessary for this use case
-- box-shadow achieves same visual result simpler
+### 视觉回归测试
 
----
-
-## Future Considerations
-
-### Potential Enhancements (Out of Scope)
-
-1. **Variable Glow Intensity** — Use CSS custom properties for opacity to allow future tuning
-2. **Animation on Scroll** — Fade in glow effect when section enters viewport
-3. **Click States** - Add glow effect for active/tapped states on mobile
-
-### Design System Integration
-
-If glow effect proves successful, consider:
-- Adding `.card--with-glow` modifier for reuse in other components
-- Standardizing glow parameters as design tokens (e.g., `--glow-primary`)
+- 对比 Features 区域的前后截图
+- 确保其他部分无意外副作用
 
 ---
 
-## Implementation Notes
+## 考虑的替代方案
 
-### Change Scope
+### 替代方案 B：卡片专属色发光（已拒绝）
 
-**Single file:** `css/landing.css`
-**Single selector:** `.feature-card:hover`
-**Line count:** ~5 lines added
+**原本需要：**
+- 4 个新的 CSS 修饰符：`.feature-card--glow-orange`, `--glow-blue`, `--glow-green`, `--glow-purple`
+- 在 HTML Feature 卡片中添加修饰符类
+- CSS 代码增加 4 倍
 
-### Risk Assessment
+**拒绝原因：**
+- 用户偏好"更统一"的外观
+- 增加维护负担
+- 视觉多样性不如品牌一致性重要
 
-- **Risk Level:** Low
-- **Breaking Changes:** None
-- **Backward Compatibility:** 100%
-- **Rollback:** Simple — remove box-shadow lines from `.feature-card:hover`
+### 替代方案 C：伪元素发光（已拒绝）
 
-### Deployment
+**原本需要：**
+- 新的 `::before` 或 `::after` 伪元素
+- `.feature-card` 上设置 `overflow: visible`
+- 用于 z-index 和定位的额外 CSS 规则
 
-- No build process required
-- No HTML changes needed
-- Safe to deploy immediately after testing
+**拒绝原因：**
+- 实现更复杂
+- 对此用例不必要
+- box-shadow 能更简单地实现相同视觉效果
 
 ---
 
-## Appendix: Visual Companion Session
+## 未来考虑
 
-Browser-based preview used to select between 3 glow effect approaches:
-- Visual server: `http://localhost:51598`
-- Session directory: `.superpowers/brainstorm/468838-1774195368`
-- Preview file: `glow-options.html`
+### 潜在增强（超出范围）
 
-User selected **Option A (Unified Brand Glow)** based on "more unified" appearance.
+1. **可变发光强度** — 使用 CSS 自定义属性控制透明度，以便未来调优
+2. **滚动动画** — 当区域进入视口时淡入发光效果
+3. **点击状态** — 为移动端的激活/点击状态添加发光效果
+
+### 设计系统集成
+
+如果发光效果证明成功，考虑：
+- 添加 `.card--with-glow` 修饰符，供其他组件复用
+- 将发光参数标准化为设计 tokens（例如 `--glow-primary`）
+
+---
+
+## 实施说明
+
+### 变更范围
+
+**单个文件：** `css/landing.css`
+**单个选择器：** `.feature-card:hover`
+**行数：** 约添加 5 行
+
+### 风险评估
+
+- **风险级别：** 低
+- **破坏性变更：** 无
+- **向后兼容性：** 100%
+- **回滚：** 简单 — 从 `.feature-card:hover` 中移除 box-shadow 行
+
+### 部署
+
+- 无需构建流程
+- 无需 HTML 变更
+- 测试后可立即安全部署
+
+---
+
+## 附录：Visual Companion 会话
+
+基于浏览器的预览用于选择 3 种发光效果方案：
+- 视觉服务器：`http://localhost:51598`
+- 会话目录：`.superpowers/brainstorm/468838-1774195368`
+- 预览文件：`glow-options.html`
+
+用户根据"更统一"的外观选择了 **方案 A（统一品牌色发光）**。
