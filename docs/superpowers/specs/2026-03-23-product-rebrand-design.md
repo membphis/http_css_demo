@@ -51,11 +51,11 @@
    - 项目状态描述
    - 任何产品名称引用
 
-### 文档文件（需检查并修改）
+### 文档文件（已检查，无需修改）
 
-4. **docs/architecture.md** - 可能包含产品名称
-5. **docs/contributing.md** - 可能包含产品名称
-6. **QUICKSTART_PR.md** - 可能包含示例
+4. **docs/architecture.md** - 不包含产品名称
+5. **docs/contributing.md** - 不包含产品名称  
+6. **QUICKSTART_PR.md** - 不包含产品名称
 
 ### 历史文档（保持不变）
 
@@ -175,9 +175,7 @@
 git status
 
 # 全局搜索所有包含 AISIX 的文件（排除历史文档）
-grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" .
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers --exclude-dir=superpowers .
 
 # 创建新分支（可选，根据工作流决定）
 git checkout -b rebrand-to-mmmm
@@ -190,7 +188,6 @@ git checkout -b rebrand-to-mmmm
 1. `index.html` - 使用 Edit 工具精确替换
 2. `README.md` - 使用 Edit 工具精确替换
 3. `AGENTS.md` - 使用 Edit 工具精确替换
-4. `docs/` 下所有相关文件 - 逐个检查和替换
 
 **注意事项：**
 - 每个文件修改前先用 Read 工具读取
@@ -201,9 +198,7 @@ git checkout -b rebrand-to-mmmm
 
 ```bash
 # 再次全局搜索，确认没有遗漏（排除历史文档）
-grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" .
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers --exclude-dir=superpowers .
 
 # 预览 HTML 页面
 xdg-open index.html  # Linux
@@ -226,7 +221,7 @@ open index.html      # macOS
 # 查看所有修改的文件
 git status
 
-# 添加所有修改的文件
+# 添加所有修改的文件（已通过 git status 预检查）
 git add -A
 
 # 创建符合规范的 commit
@@ -318,24 +313,16 @@ git reset --hard HEAD~1
 
 ```bash
 # 全局搜索（包含行号，排除历史文档）
-grep -rn "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" .
+grep -rn "AISIX" --exclude-dir=.git --exclude-dir=.superpowers --exclude-dir=superpowers .
 
 # 统计出现次数（排除历史文档）
-grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" . | wc -l
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers --exclude-dir=superpowers . | wc -l
 
 # 只列出文件名（排除历史文档）
-grep -rl "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" .
+grep -rl "AISIX" --exclude-dir=.git --exclude-dir=.superpowers --exclude-dir=superpowers .
 
-# 区分大小写搜索
-grep -r "aisix\|AISIX\|Aisix" --exclude-dir=.git \
-  --exclude="docs/superpowers/plans/*" \
-  --exclude="docs/superpowers/specs/*" .
+# 全局搜索（不区分大小写）
+grep -ri "aisix" --exclude-dir=.git --exclude-dir=superpowers .
 ```
 
 ### 测试清单
@@ -349,5 +336,5 @@ grep -r "aisix\|AISIX\|Aisix" --exclude-dir=.git \
 - [ ] 检查 footer 品牌名称
 - [ ] 滚动页面查看所有区域
 - [ ] 检查所有文档文件内容
-- [ ] 运行 grep 命令验证无遗漏（排除历史文档）
-- [ ] 确认历史文档（docs/superpowers/plans/ 和 specs/）未被修改
+- [ ] 运行 grep 命令验证无遗漏（使用 --exclude-dir=superpowers）
+- [ ] 确认历史文档（docs/superpowers/）未被修改
