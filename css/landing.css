@@ -311,6 +311,7 @@
   font-size: var(--font-size-sm);
   line-height: 1.8;
   overflow-x: auto;
+  white-space: pre-wrap;  /* Preserve line breaks and wrap long lines */
 }
 
 #tab-python:checked ~ .code-window #panel-python,
