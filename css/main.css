@@ -52,9 +52,10 @@ body {
   background: linear-gradient(90deg, var(--color-primary-hover), var(--color-primary-2));
   border-color: transparent;
   box-shadow:
-    0 0 0 1px rgba(249, 115, 22, 0.25),
-    0 0 15px rgba(249, 115, 22, 0.25),
-    0 4px 8px rgba(0, 0, 0, 0.5);
+    0 0 0 2px rgba(249, 115, 22, 0.4),
+    0 0 25px rgba(249, 115, 22, 0.4),
+    0 0 50px rgba(249, 115, 22, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .btn--outline {
