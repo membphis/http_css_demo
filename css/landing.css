@@ -169,7 +169,10 @@
 .feature-card:hover {
   transform: translateY(-3px);
   border-color: var(--color-border-accent);
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 0 0 1px rgba(249, 115, 22, 0.2),    /* 边框光晕环 */
+    0 0 20px rgba(249, 115, 22, 0.35),     /* 外部发光 */
+    0 4px 12px rgba(0, 0, 0, 0.5);        /* 投影阴影 */
 }
 
 .feature-card__glow {
