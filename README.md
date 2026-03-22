@@ -71,6 +71,8 @@ http_css_demo/
 - **[架构与约定](docs/architecture.md)** — 深入探索 CSS 架构、设计令牌、命名约定和组件模式
 - **[贡献指南](docs/contributing.md)** — 如何添加页面、组件并有效贡献
 - **[AGENTS.md](AGENTS.md)** — 详细的架构规范和开发指南
+- **[Superpowers 配置指南](docs/SUPERPOWERS_CONFIG_GUIDE.md)** — 自定义 Superpowers 工具行为
+- **[快速创建 PR](QUICKSTART_PR.md)** — 使用辅助脚本快速创建 Pull Request
 
 ## 主要特性
 
