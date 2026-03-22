@@ -8,6 +8,9 @@
 # Visual Companion (superpowers) temporary files
 .superpowers/
 
+# Git worktrees
+.worktrees/
+
 # OS generated files
 .DS_Store
 Thumbs.db
