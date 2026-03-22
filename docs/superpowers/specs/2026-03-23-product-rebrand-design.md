@@ -55,8 +55,13 @@
 
 4. **docs/architecture.md** - 可能包含产品名称
 5. **docs/contributing.md** - 可能包含产品名称
-6. **docs/superpowers/** 下的文件 - 可能包含引用
-7. **QUICKSTART_PR.md** - 可能包含示例
+6. **QUICKSTART_PR.md** - 可能包含示例
+
+### 历史文档（保持不变）
+
+7. **docs/superpowers/plans/** - 历史实现计划，作为历史记录保留
+8. **docs/superpowers/specs/** - 历史设计文档，作为历史记录保留
+9. **本规格文档** - `2026-03-23-product-rebrand-design.md` 作为设计记录保持不变
 
 ### 配置文件（需注意）
 
@@ -88,6 +93,8 @@
 - **Commit 消息：** 历史 commit 中的 "AISIX" 不修改
 - **URL/链接：** GitHub 仓库链接保持现状
 - **文件名：** 无包含品牌名称的文件名
+- **历史文档：** `docs/superpowers/plans/` 和 `docs/superpowers/specs/` 中的文件作为历史记录保持不变
+- **本规格文档：** 本文件 `docs/superpowers/specs/2026-03-23-product-rebrand-design.md` 作为设计记录保持不变
 
 ## 修改示例
 
@@ -167,8 +174,10 @@
 # 检查工作区状态
 git status
 
-# 全局搜索所有包含 AISIX 的文件
-grep -r "AISIX" --exclude-dir=.git --exclude-dir=node_modules .
+# 全局搜索所有包含 AISIX 的文件（排除历史文档）
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" .
 
 # 创建新分支（可选，根据工作流决定）
 git checkout -b rebrand-to-mmmm
@@ -191,8 +200,10 @@ git checkout -b rebrand-to-mmmm
 ### 3. 验证阶段
 
 ```bash
-# 再次全局搜索，确认没有遗漏
-grep -r "AISIX" --exclude-dir=.git .
+# 再次全局搜索，确认没有遗漏（排除历史文档）
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" .
 
 # 预览 HTML 页面
 xdg-open index.html  # Linux
@@ -207,12 +218,16 @@ open index.html      # macOS
 - [ ] Footer 中品牌名称正确
 - [ ] README.md 标题和内容一致
 - [ ] 文档引用统一
+- [ ] 历史文档（docs/superpowers/plans/ 和 specs/）保持不变
 
 ### 4. 提交更改
 
 ```bash
+# 查看所有修改的文件
+git status
+
 # 添加所有修改的文件
-git add index.html README.md AGENTS.md docs/
+git add -A
 
 # 创建符合规范的 commit
 git commit -m "chore: rebrand from AISIX AI Gateway to mmmm"
@@ -302,17 +317,25 @@ git reset --hard HEAD~1
 ### 相关命令参考
 
 ```bash
-# 全局搜索（包含行号）
-grep -rn "AISIX" --exclude-dir=.git .
+# 全局搜索（包含行号，排除历史文档）
+grep -rn "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" .
 
-# 统计出现次数
-grep -r "AISIX" --exclude-dir=.git . | wc -l
+# 统计出现次数（排除历史文档）
+grep -r "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" . | wc -l
 
-# 只列出文件名
-grep -rl "AISIX" --exclude-dir=.git .
+# 只列出文件名（排除历史文档）
+grep -rl "AISIX" --exclude-dir=.git --exclude-dir=.superpowers \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" .
 
 # 区分大小写搜索
-grep -r "aisix\|AISIX\|Aisix" --exclude-dir=.git .
+grep -r "aisix\|AISIX\|Aisix" --exclude-dir=.git \
+  --exclude="docs/superpowers/plans/*" \
+  --exclude="docs/superpowers/specs/*" .
 ```
 
 ### 测试清单
@@ -326,4 +349,5 @@ grep -r "aisix\|AISIX\|Aisix" --exclude-dir=.git .
 - [ ] 检查 footer 品牌名称
 - [ ] 滚动页面查看所有区域
 - [ ] 检查所有文档文件内容
-- [ ] 运行 `grep -r "AISIX"` 验证无遗漏
+- [ ] 运行 grep 命令验证无遗漏（排除历史文档）
+- [ ] 确认历史文档（docs/superpowers/plans/ 和 specs/）未被修改
