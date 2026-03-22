@@ -1,10 +1,10 @@
-# HTTP & CSS Demo — NexusGateway
+# HTTP & CSS Demo — AISIX
 
 > 静态 HTML + CSS 演示落地页，具有干净的架构和现代设计。
 
 ## 概述
 
-此项目演示了 NexusGateway 的生产就绪静态 HTML + CSS 落地页，这是一个开源 AI 网关。使用纯 HTML 和 CSS 构建 — 无构建工具、无打包器、无 JavaScript。
+此项目演示了 AISIX 的生产就绪静态 HTML + CSS 落地页，这是一个开源 AI 网关。使用纯 HTML 和 CSS 构建 — 无构建工具、无打包器、无 JavaScript。
 
 **技术栈：**
 - 静态 HTML5
@@ -12,7 +12,7 @@
 - 无构建工具或包管理器
 
 **项目状态：**
-- 活跃 — NexusGateway 落地页已实现
+- 活跃 — AISIX 落地页已实现
 
 直接在浏览器中打开 `.html` 文件以预览。
 
@@ -55,7 +55,7 @@ npx serve .
 http_css_demo/
 ├── README.md              # 此文件
 ├── AGENTS.md              # 架构和开发指南
-├── index.html             # NexusGateway 落地页
+├── index.html             # AISIX 落地页
 ├── css/
 │   ├── reset.css           # 浏览器重置（box-sizing、列表、锚点、媒体）
 │   ├── variables.css       # 设计令牌（所有 CSS 自定义属性）

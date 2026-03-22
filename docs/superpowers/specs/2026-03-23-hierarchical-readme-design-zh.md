@@ -1,7 +1,7 @@
 # 分层式 README 设计
 
 **日期：** 2026-03-23
-**项目：** HTTP & CSS Demo — NexusGateway
+**项目：** HTTP & CSS Demo — AISIX
 **类型：** 文档架构
 
 ---
@@ -70,12 +70,12 @@ contributing.md
 #### 大纲：
 
 ```markdown
-# HTTP & CSS Demo — NexusGateway
+# HTTP & CSS Demo — AISIX
 
 ## 概述
 - 静态 HTML + CSS 演示落地页
 - 纯 HTML + CSS，无构建工具
-- 活跃：NexusGateway 落地页已实现
+- 活跃：AISIX 落地页已实现
 
 ## 快速开始
 - 直接在浏览器中打开 index.html

@@ -2,7 +2,7 @@
 
 ## Project Status
 
-**Active** — NexusGateway landing page implemented. This document defines
+**Active** — AISIX landing page implemented. This document defines
 the architecture and conventions for ongoing development.
 
 ## Target Stack
@@ -15,7 +15,7 @@ Open `.html` files directly in a browser to preview.
 ```
 http_css_demo/
 ├── AGENTS.md
-├── index.html              # NexusGateway landing page
+├── index.html              # AISIX landing page
 ├── pages/                  # Subpages go here
 │   └── *.html
 └── css/
@@ -85,6 +85,33 @@ Never hardcode hex colors, pixel font sizes, or magic-number spacing elsewhere.
 | `--header-height`  | Sticky header height     |                           |
 
 Need a new value? Add the token to `variables.css` first, then reference it.
+
+## Git Commit Convention
+
+**All commit messages MUST be in English**, following the Conventional Commits format:
+
+- `feat: add new feature` — new functionality
+- `fix: resolve bug in component` — bug fixes
+- `docs: update README` — documentation changes
+- `style: format CSS` — code style changes (formatting, whitespace)
+- `refactor: restructure file layout` — code refactoring without functional changes
+- `chore: update dependencies` — maintenance tasks
+
+**Format:**
+```
+<type>: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Examples:**
+```bash
+git commit -m "feat: add hover glow effect to primary button"
+git commit -m "fix: correct header alignment on mobile"
+git commit -m "docs: add CSS architecture guide"
+```
 
 ## Naming Conventions
 

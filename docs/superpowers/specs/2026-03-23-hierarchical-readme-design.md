@@ -1,7 +1,7 @@
 # Hierarchical README Design
 
 **Date:** 2026-03-23
-**Project:** HTTP & CSS Demo — NexusGateway
+**Project:** HTTP & CSS Demo — AISIX
 **Type:** Documentation Architecture
 
 ---
@@ -70,12 +70,12 @@ contributing.md
 #### Outline:
 
 ```markdown
-# HTTP & CSS Demo — NexusGateway
+# HTTP & CSS Demo — AISIX
 
 ## Overview
 - Static HTML + CSS demo landing page
 - Pure HTML + CSS, no build tools
-- Active: NexusGateway landing page implemented
+- Active: AISIX landing page implemented
 
 ## Quick Start
 - Open index.html directly in browser
