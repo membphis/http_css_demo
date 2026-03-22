@@ -86,6 +86,33 @@ Never hardcode hex colors, pixel font sizes, or magic-number spacing elsewhere.
 
 Need a new value? Add the token to `variables.css` first, then reference it.
 
+## Git Commit Convention
+
+**All commit messages MUST be in English**, following the Conventional Commits format:
+
+- `feat: add new feature` — new functionality
+- `fix: resolve bug in component` — bug fixes
+- `docs: update README` — documentation changes
+- `style: format CSS` — code style changes (formatting, whitespace)
+- `refactor: restructure file layout` — code refactoring without functional changes
+- `chore: update dependencies` — maintenance tasks
+
+**Format:**
+```
+<type>: <description>
+
+[optional body]
+
+[optional footer]
+```
+
+**Examples:**
+```bash
+git commit -m "feat: add hover glow effect to primary button"
+git commit -m "fix: correct header alignment on mobile"
+git commit -m "docs: add CSS architecture guide"
+```
+
 ## Naming Conventions
 
 ### CSS Classes — BEM
