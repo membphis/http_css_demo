@@ -66,9 +66,10 @@ Expected:
 **Files:**
 - Modify: `index.html:6` (title)
 - Modify: `index.html:19` (header logo)
-- Modify: `index.html:24` (GitHub link)
-- Modify: `index.html:46` (hero CTA GitHub link)
-- Modify: `index.html:222` (footer text)
+- Modify: `index.html:61` (section subtitle)
+- Modify: `index.html:148` (code comment)
+- Modify: `index.html:206` (footer logo)
+- Modify: `index.html:218` (footer copyright)
 
 **替换规则：**
 - "AISIX AI Gateway" → "mmmm"
@@ -116,7 +117,75 @@ Expected:
 
 使用 Edit 工具精确替换。
 
-- [ ] **Step 4: 验证 index.html 中不再包含 AISIX**
+- [ ] **Step 4: 替换 section subtitle 中的品牌名称**
+
+在 `index.html:61` 位置：
+
+**修改前：**
+```html
+          <p class="section-header__subtitle">从路由到可观测性，AISIX AI Gateway 覆盖生产环境所需的一切</p>
+```
+
+**修改后：**
+```html
+          <p class="section-header__subtitle">从路由到可观测性，mmmm 覆盖生产环境所需的一切</p>
+```
+
+使用 Edit 工具精确替换。
+
+- [ ] **Step 5: 替换代码注释中的品牌名称**
+
+在 `index.html:148` 位置：
+
+**修改前：**
+```html
+<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 AISIX AI Gateway 即可</span>
+```
+
+**修改后：**
+```html
+<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 mmmm 即可</span>
+```
+
+使用 Edit 工具精确替换。
+
+- [ ] **Step 6: 替换 footer logo 中的品牌名称**
+
+在 `index.html:204-207` 位置：
+
+**修改前：**
+```html
+          <div class="site-footer__logo">
+            <span>⬡</span> AISIX AI Gateway
+          </div>
+```
+
+**修改后：**
+```html
+          <div class="site-footer__logo">
+            <span>⬡</span> mmmm
+          </div>
+```
+
+使用 Edit 工具精确替换。
+
+- [ ] **Step 7: 替换 footer copyright 中的品牌名称**
+
+在 `index.html:218` 位置：
+
+**修改前：**
+```html
+      <p class="site-footer__copy">© 2026 AISIX AI Gateway. Released under the MIT License.</p>
+```
+
+**修改后：**
+```html
+      <p class="site-footer__copy">© 2026 mmmm. Released under the MIT License.</p>
+```
+
+使用 Edit 工具精确替换。
+
+- [ ] **Step 8: 验证 index.html 中不再包含 AISIX**
 
 ```bash
 grep -n "AISIX" index.html
@@ -124,7 +193,7 @@ grep -n "AISIX" index.html
 
 Expected: 无输出（不包含 AISIX）
 
-- [ ] **Step 5: 在浏览器中预览验证**
+- [ ] **Step 9: 在浏览器中预览验证**
 
 ```bash
 xdg-open index.html  # Linux
@@ -137,7 +206,7 @@ open index.html      # macOS
 - Header logo 显示为 "mmmm"
 - 页面其他内容正常显示
 
-- [ ] **Step 6: 提交 index.html 的更改**
+- [ ] **Step 10: 提交 index.html 的更改**
 
 ```bash
 git add index.html
