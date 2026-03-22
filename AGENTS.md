@@ -2,8 +2,8 @@
 
 ## Project Status
 
-**Greenfield** — no source files exist yet. This document defines the target
-architecture and conventions. Follow these rules when creating files.
+**Active** — NexusGateway landing page implemented. This document defines
+the architecture and conventions for ongoing development.
 
 ## Target Stack
 
@@ -15,13 +15,14 @@ Open `.html` files directly in a browser to preview.
 ```
 http_css_demo/
 ├── AGENTS.md
-├── index.html              # Home page — first file to create
+├── index.html              # NexusGateway landing page
 ├── pages/                  # Subpages go here
 │   └── *.html
 └── css/
     ├── reset.css           # Browser reset (box-sizing, list, anchor, media)
     ├── variables.css       # Design tokens (all CSS custom properties)
     ├── main.css            # Global styles (nav, buttons, footer, responsive)
+    ├── landing.css         # Landing page specific styles
     └── <page>.css          # One per subpage (layout.css, components.css, etc.)
 ```
 
