@@ -5,6 +5,9 @@
 *.server.pid
 .server.pid
 
+# Visual Companion (superpowers) temporary files
+.superpowers/
+
 # OS generated files
 .DS_Store
 Thumbs.db
