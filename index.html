@@ -137,12 +137,10 @@
 
             <div id="panel-python" class="code-panel">
 <span class="tok-keyword">import</span> <span class="tok-name">openai</span>
-
 <span class="tok-name">client</span> <span class="tok-punct">=</span> <span class="tok-name">openai</span><span class="tok-punct">.</span><span class="tok-func">OpenAI</span><span class="tok-punct">(</span>
     <span class="tok-param">base_url</span><span class="tok-punct">=</span><span class="tok-string">"http://localhost:8080/v1"</span><span class="tok-punct">,</span>
     <span class="tok-param">api_key</span><span class="tok-punct">=</span><span class="tok-string">"nex-your-key"</span>
 <span class="tok-punct">)</span>
-
 <span class="tok-name">response</span> <span class="tok-punct">=</span> <span class="tok-name">client</span><span class="tok-punct">.</span><span class="tok-name">chat</span><span class="tok-punct">.</span><span class="tok-name">completions</span><span class="tok-punct">.</span><span class="tok-func">create</span><span class="tok-punct">(</span>
     <span class="tok-param">model</span><span class="tok-punct">=</span><span class="tok-string">"gpt-4o"</span><span class="tok-punct">,</span>
     <span class="tok-param">messages</span><span class="tok-punct">=[{</span><span class="tok-string">"role"</span><span class="tok-punct">:</span> <span class="tok-string">"user"</span><span class="tok-punct">,</span> <span class="tok-string">"content"</span><span class="tok-punct">:</span> <span class="tok-string">"Hello!"</span><span class="tok-punct">}]</span>
@@ -152,12 +150,10 @@
 
             <div id="panel-node" class="code-panel">
 <span class="tok-keyword">import</span> <span class="tok-name">OpenAI</span> <span class="tok-keyword">from</span> <span class="tok-string">'openai'</span><span class="tok-punct">;</span>
-
 <span class="tok-keyword">const</span> <span class="tok-name">client</span> <span class="tok-punct">=</span> <span class="tok-keyword">new</span> <span class="tok-func">OpenAI</span><span class="tok-punct">({</span>
   <span class="tok-param">baseURL</span><span class="tok-punct">:</span> <span class="tok-string">'http://localhost:8080/v1'</span><span class="tok-punct">,</span>
   <span class="tok-param">apiKey</span><span class="tok-punct">:</span> <span class="tok-string">'nex-your-key'</span><span class="tok-punct">,</span>
 <span class="tok-punct">});</span>
-
 <span class="tok-keyword">const</span> <span class="tok-name">response</span> <span class="tok-punct">=</span> <span class="tok-keyword">await</span> <span class="tok-name">client</span><span class="tok-punct">.</span><span class="tok-name">chat</span><span class="tok-punct">.</span><span class="tok-name">completions</span><span class="tok-punct">.</span><span class="tok-func">create</span><span class="tok-punct">({</span>
   <span class="tok-param">model</span><span class="tok-punct">:</span> <span class="tok-string">'gpt-4o'</span><span class="tok-punct">,</span>
   <span class="tok-param">messages</span><span class="tok-punct">: [{</span> <span class="tok-param">role</span><span class="tok-punct">:</span> <span class="tok-string">'user'</span><span class="tok-punct">,</span> <span class="tok-param">content</span><span class="tok-punct">:</span> <span class="tok-string">'Hello!'</span> <span class="tok-punct">}],</span>
