@@ -1,8 +1,8 @@
-# NexusGateway 落地页实现计划
+# AISIX 落地页实现计划
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 创建 NexusGateway 开源 AI Gateway 的官方落地页，包含 Hero、Features、Code Snippet、GitHub CTA 四个核心区块。
+**Goal:** 创建 AISIX 开源 AI Gateway 的官方落地页，包含 Hero、Features、Code Snippet、GitHub CTA 四个核心区块。
 
 **Architecture:** 纯静态 HTML + CSS，单页 `index.html`，样式拆分为 4 个 CSS 文件按顺序加载（reset → variables → main → landing）。无 JavaScript，Tab 切换通过隐藏 radio input + CSS `:checked` 兄弟选择器实现。
 
@@ -942,7 +942,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexusGateway — Open Source AI Gateway</title>
+  <title>AISIX — Open Source AI Gateway</title>
   <meta name="description" content="Route, secure and scale any AI provider with a single unified API. Open source, self-hostable AI Gateway.">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
@@ -956,12 +956,12 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
     <div class="container site-header__inner">
       <a href="/" class="site-header__logo">
         <div class="site-header__logo-icon">⬡</div>
-        NexusGateway
+        AISIX
       </a>
       <nav class="site-header__nav">
         <a href="#features" class="nav-link">Features</a>
         <a href="#code-demo" class="nav-link">Docs</a>
-        <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
+        <a href="https://github.com/membphis/http_css_demo" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
       </nav>
     </div>
   </header>
@@ -984,7 +984,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
         </p>
         <div class="hero__cta">
           <a href="#code-demo" class="btn btn--primary">快速开始 →</a>
-          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
+          <a href="https://github.com/membphis/http_css_demo" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
         </div>
         <div class="hero__social-proof">
           <span>★ 2.3k stars</span>
@@ -1000,7 +1000,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
         <div class="section-header">
           <span class="section-header__label">Features</span>
           <h2 class="section-header__title">一个网关，接管所有 AI</h2>
-          <p class="section-header__subtitle">从路由到可观测性，NexusGateway 覆盖生产环境所需的一切</p>
+          <p class="section-header__subtitle">从路由到可观测性，AISIX 覆盖生产环境所需的一切</p>
         </div>
         <div class="features__grid">
 
@@ -1090,7 +1090,7 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
     <span class="tok-param">model</span><span class="tok-punct">=</span><span class="tok-string">"gpt-4o"</span><span class="tok-punct">,</span>
     <span class="tok-param">messages</span><span class="tok-punct">=[{</span><span class="tok-string">"role"</span><span class="tok-punct">:</span> <span class="tok-string">"user"</span><span class="tok-punct">,</span> <span class="tok-string">"content"</span><span class="tok-punct">:</span> <span class="tok-string">"Hello!"</span><span class="tok-punct">}]</span>
 <span class="tok-punct">)</span>
-<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 NexusGateway 即可</span>
+<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 AISIX 即可</span>
             </div>
 
             <div id="panel-node" class="code-panel">
@@ -1133,8 +1133,8 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
         <h2 class="cta-github__title">开源、免费、可自托管</h2>
         <p class="cta-github__subtitle">加入社区，一起构建下一代 AI 基础设施</p>
         <div class="cta-github__actions">
-          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--primary">★ Star on GitHub</a>
-          <a href="https://github.com/nexusgateway/nexusgateway#readme" target="_blank" rel="noopener" class="btn btn--outline">查看文档</a>
+          <a href="https://github.com/membphis/http_css_demo" target="_blank" rel="noopener" class="btn btn--primary">★ Star on GitHub</a>
+          <a href="https://github.com/membphis/http_css_demo#readme" target="_blank" rel="noopener" class="btn btn--outline">查看文档</a>
         </div>
         <div class="cta-github__stats">
           <span>★ 2.3k stars</span>
@@ -1152,19 +1152,19 @@ git commit -m "feat: add features, code-demo, cta-github styles to landing.css"
       <div class="site-footer__inner">
         <div>
           <div class="site-footer__brand">
-            <span>⬡</span> NexusGateway
+            <span>⬡</span> AISIX
           </div>
           <p class="site-footer__tagline">Open Source AI Gateway</p>
         </div>
         <nav class="site-footer__nav">
           <a href="#features">Features</a>
           <a href="#code-demo">Docs</a>
-          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://github.com/nexusgateway/nexusgateway/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+          <a href="https://github.com/membphis/http_css_demo" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/membphis/http_css_demo/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
         </nav>
         <p class="site-footer__meta">MIT License · Made with ♥ by the community</p>
       </div>
-      <p class="site-footer__copy">© 2026 NexusGateway. Released under the MIT License.</p>
+      <p class="site-footer__copy">© 2026 AISIX. Released under the MIT License.</p>
     </div>
   </footer>
 
@@ -1192,7 +1192,7 @@ python3 -m http.server 8000
 
 ```bash
 git add index.html
-git commit -m "feat: add complete index.html for NexusGateway landing page"
+git commit -m "feat: add complete index.html for AISIX landing page"
 ```
 
 ---

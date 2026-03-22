@@ -2,7 +2,7 @@
 
 ## Project Status
 
-**Active** — NexusGateway landing page implemented. This document defines
+**Active** — AISIX landing page implemented. This document defines
 the architecture and conventions for ongoing development.
 
 ## Target Stack
@@ -15,7 +15,7 @@ Open `.html` files directly in a browser to preview.
 ```
 http_css_demo/
 ├── AGENTS.md
-├── index.html              # NexusGateway landing page
+├── index.html              # AISIX landing page
 ├── pages/                  # Subpages go here
 │   └── *.html
 └── css/
