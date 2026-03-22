@@ -77,15 +77,17 @@ else
     fi
 fi
 
-# 读取 PR 标题模板
-if [ -f "$CONFIG_FILE" ]; then
+    # 读取 PR 标题模板
     TITLE_TEMPLATE=$(grep "pr_title_template:" "$CONFIG_FILE" | sed 's/pr_title_template: //' | xargs)
     if [ -n "$TITLE_TEMPLATE" ]; then
         # 替换变量
-        TITLE=${TITLE_TEMPLATE//\{\{description\}\}/实施完成}
+        TITLE=$(echo "$TITLE_TEMPLATE" | sed 's/{{description}}/实施完成/g')
     else
         TITLE="实施完成"
     fi
+else
+    TITLE="实施完成"
+fi
 else
     TITLE="实施完成"
 fi
