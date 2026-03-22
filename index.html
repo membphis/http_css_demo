@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusGateway — Open Source AI Gateway</title>
+  <meta name="description" content="Route, secure and scale any AI provider with a single unified API. Open source, self-hostable AI Gateway.">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__logo">
+        <div class="site-header__logo-icon">⬡</div>
+        NexusGateway
+      </a>
+      <nav class="site-header__nav">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#code-demo" class="nav-link">Docs</a>
+        <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero__glow-1"></div>
+      <div class="hero__glow-2"></div>
+      <div class="hero__content">
+        <span class="hero__badge">v1.0 · OPEN SOURCE</span>
+        <h1 class="hero__title">
+          The AI Gateway for<br>
+          <span class="hero__title-gradient">Production Teams</span>
+        </h1>
+        <p class="hero__subtitle">
+          Route. Secure. Scale. Any AI Provider.<br>
+          统一接口管理 OpenAI、Anthropic、Gemini 等所有 AI 提供商
+        </p>
+        <div class="hero__cta">
+          <a href="#code-demo" class="btn btn--primary">快速开始 →</a>
+          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--outline">★ GitHub</a>
+        </div>
+        <div class="hero__social-proof">
+          <span>★ 2.3k stars</span>
+          <span>MIT License</span>
+          <span>v1.0.0</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Features</span>
+          <h2 class="section-header__title">一个网关，接管所有 AI</h2>
+          <p class="section-header__subtitle">从路由到可观测性，NexusGateway 覆盖生产环境所需的一切</p>
+        </div>
+        <div class="features__grid">
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--orange"></div>
+            <span class="feature-card__icon">⚡</span>
+            <h3 class="feature-card__title">智能路由</h3>
+            <p class="feature-card__desc">基于延迟、成本、可用性自动选择最优 Provider，支持故障转移与负载均衡。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--blue"></div>
+            <span class="feature-card__icon">🔒</span>
+            <h3 class="feature-card__title">密钥管理</h3>
+            <p class="feature-card__desc">集中管理所有 Provider 的 API Keys，细粒度权限控制，避免密钥泄露风险。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--green"></div>
+            <span class="feature-card__icon">📊</span>
+            <h3 class="feature-card__title">可观测性</h3>
+            <p class="feature-card__desc">Token 用量、费用、延迟全链路追踪，实时监控 AI 调用情况。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--purple"></div>
+            <span class="feature-card__icon">🔄</span>
+            <h3 class="feature-card__title">限流与重试</h3>
+            <p class="feature-card__desc">速率限制、自动重试、熔断器保护，确保服务在高压下的稳定性。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--orange-light"></div>
+            <span class="feature-card__icon">🌐</span>
+            <h3 class="feature-card__title">多 Provider</h3>
+            <p class="feature-card__desc">统一接口接入 OpenAI、Anthropic、Gemini、Mistral 等主流 AI 提供商。</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__glow feature-card__glow--blue-light"></div>
+            <span class="feature-card__icon">🔌</span>
+            <h3 class="feature-card__title">插件系统</h3>
+            <p class="feature-card__desc">自定义中间件与扩展，灵活集成缓存、日志、鉴权等业务逻辑。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="code-demo" id="code-demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Quick Start</span>
+          <h2 class="section-header__title">几行代码，接入所有 AI</h2>
+          <p class="section-header__subtitle">兼容 OpenAI SDK，无需修改现有代码</p>
+        </div>
+
+        <div class="code-demo__wrapper">
+          <input type="radio" name="code-tab" id="tab-python" class="code-tab__input" checked>
+          <input type="radio" name="code-tab" id="tab-node" class="code-tab__input">
+          <input type="radio" name="code-tab" id="tab-curl" class="code-tab__input">
+
+          <div class="code-window">
+            <div class="code-window__chrome">
+              <div class="code-window__dots">
+                <span class="code-window__dot code-window__dot--red"></span>
+                <span class="code-window__dot code-window__dot--yellow"></span>
+                <span class="code-window__dot code-window__dot--green"></span>
+              </div>
+              <div class="code-tabs">
+                <label for="tab-python" class="code-tab__label">Python</label>
+                <label for="tab-node" class="code-tab__label">Node.js</label>
+                <label for="tab-curl" class="code-tab__label">cURL</label>
+              </div>
+            </div>
+
+            <div id="panel-python" class="code-panel">
+<span class="tok-keyword">import</span> <span class="tok-name">openai</span>
+
+<span class="tok-name">client</span> <span class="tok-punct">=</span> <span class="tok-name">openai</span><span class="tok-punct">.</span><span class="tok-func">OpenAI</span><span class="tok-punct">(</span>
+    <span class="tok-param">base_url</span><span class="tok-punct">=</span><span class="tok-string">"http://localhost:8080/v1"</span><span class="tok-punct">,</span>
+    <span class="tok-param">api_key</span><span class="tok-punct">=</span><span class="tok-string">"nex-your-key"</span>
+<span class="tok-punct">)</span>
+
+<span class="tok-name">response</span> <span class="tok-punct">=</span> <span class="tok-name">client</span><span class="tok-punct">.</span><span class="tok-name">chat</span><span class="tok-punct">.</span><span class="tok-name">completions</span><span class="tok-punct">.</span><span class="tok-func">create</span><span class="tok-punct">(</span>
+    <span class="tok-param">model</span><span class="tok-punct">=</span><span class="tok-string">"gpt-4o"</span><span class="tok-punct">,</span>
+    <span class="tok-param">messages</span><span class="tok-punct">=[{</span><span class="tok-string">"role"</span><span class="tok-punct">:</span> <span class="tok-string">"user"</span><span class="tok-punct">,</span> <span class="tok-string">"content"</span><span class="tok-punct">:</span> <span class="tok-string">"Hello!"</span><span class="tok-punct">}]</span>
+<span class="tok-punct">)</span>
+<span class="tok-comment"># 原生 OpenAI SDK，直接将 base_url 指向 NexusGateway 即可</span>
+            </div>
+
+            <div id="panel-node" class="code-panel">
+<span class="tok-keyword">import</span> <span class="tok-name">OpenAI</span> <span class="tok-keyword">from</span> <span class="tok-string">'openai'</span><span class="tok-punct">;</span>
+
+<span class="tok-keyword">const</span> <span class="tok-name">client</span> <span class="tok-punct">=</span> <span class="tok-keyword">new</span> <span class="tok-func">OpenAI</span><span class="tok-punct">({</span>
+  <span class="tok-param">baseURL</span><span class="tok-punct">:</span> <span class="tok-string">'http://localhost:8080/v1'</span><span class="tok-punct">,</span>
+  <span class="tok-param">apiKey</span><span class="tok-punct">:</span> <span class="tok-string">'nex-your-key'</span><span class="tok-punct">,</span>
+<span class="tok-punct">});</span>
+
+<span class="tok-keyword">const</span> <span class="tok-name">response</span> <span class="tok-punct">=</span> <span class="tok-keyword">await</span> <span class="tok-name">client</span><span class="tok-punct">.</span><span class="tok-name">chat</span><span class="tok-punct">.</span><span class="tok-name">completions</span><span class="tok-punct">.</span><span class="tok-func">create</span><span class="tok-punct">({</span>
+  <span class="tok-param">model</span><span class="tok-punct">:</span> <span class="tok-string">'gpt-4o'</span><span class="tok-punct">,</span>
+  <span class="tok-param">messages</span><span class="tok-punct">: [{</span> <span class="tok-param">role</span><span class="tok-punct">:</span> <span class="tok-string">'user'</span><span class="tok-punct">,</span> <span class="tok-param">content</span><span class="tok-punct">:</span> <span class="tok-string">'Hello!'</span> <span class="tok-punct">}],</span>
+<span class="tok-punct">});</span>
+<span class="tok-comment">// 零改动迁移——只需更换 baseURL</span>
+            </div>
+
+            <div id="panel-curl" class="code-panel">
+<span class="tok-func">curl</span> <span class="tok-string">http://localhost:8080/v1/chat/completions</span> <span class="tok-punct">\</span>
+  <span class="tok-param">-H</span> <span class="tok-string">"Authorization: Bearer nex-your-key"</span> <span class="tok-punct">\</span>
+  <span class="tok-param">-H</span> <span class="tok-string">"Content-Type: application/json"</span> <span class="tok-punct">\</span>
+  <span class="tok-param">-d</span> <span class="tok-string">'{
+    "model": "gpt-4o",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="code-demo__note">
+          <strong>兼容 OpenAI SDK</strong> — 无需修改任何现有代码，直接替换 base_url 即可
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-github">
+      <div class="cta-github__glow"></div>
+      <div class="container cta-github__content">
+        <h2 class="cta-github__title">开源、免费、可自托管</h2>
+        <p class="cta-github__subtitle">加入社区，一起构建下一代 AI 基础设施</p>
+        <div class="cta-github__actions">
+          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener" class="btn btn--primary">★ Star on GitHub</a>
+          <a href="https://github.com/nexusgateway/nexusgateway#readme" target="_blank" rel="noopener" class="btn btn--outline">查看文档</a>
+        </div>
+        <div class="cta-github__stats">
+          <span>★ 2.3k stars</span>
+          <span>180 forks</span>
+          <span>42 contributors</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div>
+          <div class="site-footer__brand">
+            <span>⬡</span> NexusGateway
+          </div>
+          <p class="site-footer__tagline">Open Source AI Gateway</p>
+        </div>
+        <nav class="site-footer__nav">
+          <a href="#features">Features</a>
+          <a href="#code-demo">Docs</a>
+          <a href="https://github.com/nexusgateway/nexusgateway" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/nexusgateway/nexusgateway/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+        </nav>
+        <p class="site-footer__meta">MIT License · Made with ♥ by the community</p>
+      </div>
+      <p class="site-footer__copy">© 2026 NexusGateway. Released under the MIT License.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

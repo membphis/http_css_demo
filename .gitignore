@@ -1,0 +1,17 @@
+# Temporary server files
+.server-info
+*.server.log
+.server.log
+*.server.pid
+.server.pid
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

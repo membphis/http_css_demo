@@ -1,0 +1,100 @@
+<h2>代码示例区域风格</h2>
+<p class="subtitle">选择 Code Snippet 区域的展示方式</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="terminal-block" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;min-height:180px;font-family:monospace;">
+      <div style="color:#94a3b8;font-size:9px;letter-spacing:2px;text-align:center;margin-bottom:12px;">QUICK START</div>
+      <div style="background:#020617;border:1px solid #334155;border-radius:8px;overflow:hidden;max-width:320px;margin:0 auto;">
+        <!-- Terminal title bar -->
+        <div style="background:#1e293b;padding:6px 10px;display:flex;align-items:center;gap:5px;border-bottom:1px solid #334155;">
+          <div style="width:7px;height:7px;background:#ef4444;border-radius:50%;"></div>
+          <div style="width:7px;height:7px;background:#f59e0b;border-radius:50%;"></div>
+          <div style="width:7px;height:7px;background:#22c55e;border-radius:50%;"></div>
+          <span style="color:#475569;font-size:8px;margin-left:6px;">terminal</span>
+        </div>
+        <div style="padding:12px;font-size:9px;line-height:1.8;">
+          <div><span style="color:#475569;">$</span> <span style="color:#f8fafc;">pip install nexus-gateway</span></div>
+          <div><span style="color:#475569;">$</span> <span style="color:#f8fafc;">nexus init</span></div>
+          <div style="color:#64748b;margin-top:4px;"># config.yaml 已生成</div>
+          <div style="margin-top:4px;"><span style="color:#475569;">$</span> <span style="color:#fb923c;">nexus start</span> <span style="color:#34d399;">--port 8080</span></div>
+          <div style="color:#34d399;margin-top:4px;">✓ NexusGateway running on :8080</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>终端命令块</h3>
+      <p>macOS 风格终端窗口，展示安装和启动命令。强调"3 步上手"的极速体验。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="tabbed-code" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;min-height:180px;font-family:monospace;">
+      <div style="color:#94a3b8;font-size:9px;letter-spacing:2px;text-align:center;margin-bottom:12px;">INTEGRATE IN SECONDS</div>
+      <div style="background:#020617;border:1px solid #334155;border-radius:8px;overflow:hidden;max-width:320px;margin:0 auto;">
+        <!-- Tabs -->
+        <div style="background:#1e293b;display:flex;border-bottom:1px solid #334155;">
+          <div style="padding:6px 12px;font-size:8px;color:#fb923c;border-bottom:2px solid #f97316;">Python</div>
+          <div style="padding:6px 12px;font-size:8px;color:#475569;">Node.js</div>
+          <div style="padding:6px 12px;font-size:8px;color:#475569;">cURL</div>
+        </div>
+        <div style="padding:12px;font-size:9px;line-height:1.8;">
+          <div><span style="color:#a78bfa;">import</span> <span style="color:#f8fafc;">nexus</span></div>
+          <div style="height:4px;"></div>
+          <div><span style="color:#f8fafc;">client</span> <span style="color:#94a3b8;">=</span> <span style="color:#fb923c;">nexus</span><span style="color:#94a3b8;">.</span><span style="color:#60a5fa;">Client</span><span style="color:#94a3b8;">(</span></div>
+          <div><span style="color:#94a3b8;">&nbsp;&nbsp;url</span><span style="color:#94a3b8;">=</span><span style="color:#34d399;">"http://localhost:8080"</span></div>
+          <div><span style="color:#94a3b8;">)</span></div>
+          <div style="height:4px;"></div>
+          <div><span style="color:#f8fafc;">response</span> <span style="color:#94a3b8;">=</span> <span style="color:#f8fafc;">client</span><span style="color:#94a3b8;">.</span><span style="color:#60a5fa;">chat</span><span style="color:#94a3b8;">(</span></div>
+          <div><span style="color:#94a3b8;">&nbsp;&nbsp;model</span><span style="color:#94a3b8;">=</span><span style="color:#34d399;">"gpt-4o"</span><span style="color:#94a3b8;">,</span></div>
+          <div><span style="color:#94a3b8;">&nbsp;&nbsp;messages</span><span style="color:#94a3b8;">=[...]</span></div>
+          <div><span style="color:#94a3b8;">)</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>多语言 Tab 代码块</h3>
+      <p>Python / Node.js / cURL 三个标签切换，展示 API 调用示例。覆盖更广的开发者群体。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="split-code" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f172a;padding:20px;min-height:180px;font-family:monospace;">
+      <div style="color:#94a3b8;font-size:9px;letter-spacing:2px;text-align:center;margin-bottom:12px;">SEE IT IN ACTION</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:340px;margin:0 auto;">
+        <!-- Left: config -->
+        <div style="background:#020617;border:1px solid #334155;border-radius:6px;overflow:hidden;">
+          <div style="background:#1e293b;padding:5px 8px;font-size:8px;color:#64748b;border-bottom:1px solid #334155;">config.yaml</div>
+          <div style="padding:8px;font-size:8px;line-height:1.7;color:#94a3b8;">
+            <div><span style="color:#fb923c;">providers</span><span style="color:#f8fafc;">:</span></div>
+            <div>&nbsp;&nbsp;<span style="color:#f8fafc;">- openai</span></div>
+            <div>&nbsp;&nbsp;<span style="color:#f8fafc;">- anthropic</span></div>
+            <div><span style="color:#fb923c;">routing</span><span style="color:#f8fafc;">:</span></div>
+            <div>&nbsp;&nbsp;<span style="color:#60a5fa;">strategy</span><span style="color:#f8fafc;">: fallback</span></div>
+            <div><span style="color:#fb923c;">rate_limit</span><span style="color:#f8fafc;">:</span></div>
+            <div>&nbsp;&nbsp;<span style="color:#60a5fa;">rpm</span><span style="color:#f8fafc;">: 1000</span></div>
+          </div>
+        </div>
+        <!-- Right: request -->
+        <div style="background:#020617;border:1px solid #334155;border-radius:6px;overflow:hidden;">
+          <div style="background:#1e293b;padding:5px 8px;font-size:8px;color:#64748b;border-bottom:1px solid #334155;">request.py</div>
+          <div style="padding:8px;font-size:8px;line-height:1.7;">
+            <div><span style="color:#a78bfa;">import</span> <span style="color:#f8fafc;">openai</span></div>
+            <div style="height:3px;"></div>
+            <div><span style="color:#f8fafc;">client</span> <span style="color:#94a3b8;">=</span> <span style="color:#60a5fa;">openai</span><span style="color:#94a3b8;">.</span><span style="color:#60a5fa;">OpenAI</span><span style="color:#94a3b8;">(</span></div>
+            <div>&nbsp;<span style="color:#fb923c;">base_url</span><span style="color:#94a3b8;">=</span></div>
+            <div>&nbsp;<span style="color:#34d399;">"localhost:8080"</span></div>
+            <div><span style="color:#94a3b8;">)</span></div>
+            <div style="color:#475569;font-size:7px;margin-top:3px;"># 原生 OpenAI SDK 直接用！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>配置 + 代码 双栏</h3>
+      <p>左侧 YAML 配置文件，右侧 Python 调用代码。强调"原生 SDK 兼容"的核心卖点。</p>
+    </div>
+  </div>
+
+</div>
