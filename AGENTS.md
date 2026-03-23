@@ -2,7 +2,7 @@
 
 ## Project Status
 
-**Active** — AISIX AI Gateway landing page implemented. This document defines
+**Active** — mmmm landing page implemented. This document defines
 the architecture and conventions for ongoing development.
 
 ## Target Stack
@@ -15,7 +15,7 @@ Open `.html` files directly in a browser to preview.
 ```
 http_css_demo/
 ├── AGENTS.md
-├── index.html              # AISIX AI Gateway landing page
+├── index.html              # mmmm landing page
 ├── pages/                  # Subpages go here
 │   └── *.html
 └── css/
